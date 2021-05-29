@@ -1,0 +1,73 @@
+﻿@model UserFlowerShop.Models.Users
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@*@using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <h4 class="our">~ Введите данные ~</h4>
+            <div class="autorization">
+                <div class="text-info">
+                    <p>
+                        Введите свой логин (Email):
+                    </p>
+                    <div class="inputs">
+                        @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger" })
+                    </div>
+                    <p>
+                        Введите свой пароль:
+                    </p>
+                    <div class="inputs">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", type = "password" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="entrance">
+                        <input type="submit" value="Войти" class="btn btn-default" />
+                    </div>
+                    <a href="/Users/Create">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+    }*@
+
+
+<div class="container-login100" style="background-image: url('/img/bg-01.jpg');">
+    <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <span class="login100-form-title p-b-37">
+                Войти
+            </span>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+                <input class="input100" type="text" id="Mail" name="Mail" placeholder="E-mail">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-25" data-validate="Enter password">
+                <input class="input100" type="password" id="Password" name="Password" placeholder="Пароль" autocomplete="new-password">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="container-login100-form-btn">
+                <button class="login100-form-btn">
+                    Войти
+                </button>
+            </div>
+            <a href="/Users/Create" class="registers">Зарегистрироваться</a>
+        }
+    </div>
+</div>
+@Styles.Render("~/Content/Eror.css")
+@section Scripts {
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.1.js">
+    </script>
+    @Scripts.Render("~/Scripts/Logins.js")
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9fae4dd0c24e477a8789b435e8778dc8" Name="Diagram1">
+        <EntityTypeShape EntityType="FlowerModel.Basket" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.BasketContent" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.Categories" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.Goods" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.Manufacturer" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.Order" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.PaymentType" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.Points" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.Status" Width="1.5" PointX="6" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlowerModel.Users" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="FlowerModel.FK_Basket_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="FlowerModel.FK_BasketContent_Basket" ManuallyRouted="false" />
+        <AssociationConnector Association="FlowerModel.FK_Order_Basket" ManuallyRouted="false" />
+        <AssociationConnector Association="FlowerModel.FK_BasketContent_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="FlowerModel.FK_Goods_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="FlowerModel.FK_Goods_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="FlowerModel.FK_Order_PaymentType" ManuallyRouted="false" />
+        <AssociationConnector Association="FlowerModel.FK_Order_Points" ManuallyRouted="false" />
+        <AssociationConnector Association="FlowerModel.FK_Order_Status" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,87 @@
+﻿@model UserFlowerShop.Models.Users
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/Create.js")
+    @Scripts.Render("~/Scripts/jquery-3.6.0.min.js")
+<script type="text/javascript" src="~/Scripts/jquery-3.4.1.js">
+</script>
+    <script type="text/javascript" src="~/Scripts/datepicker.js">
+    </script>
+    <script type="text/javascript">
+        let DataMax = new Date();
+        DataMax.setFullYear(DataMax.getFullYear() - 14);
+        $('#BirthDay').datepicker({
+            maxDate: DataMax
+        });
+    </script>
+}
+
+<div class="container-login100" style="background-image: url('/img/bg-01.jpg');">
+    <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <span class="login100-form-title p-b-37">
+                Регистрация
+            </span>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="wrap-input100 validate-input m-b-20" data-validate="Введите фамилию">
+
+                <input class="input100" type="text" id="Surname" name="Surname" placeholder="Фамилия">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-20" data-validate="Введите имя">
+
+                <input class="input100" type="text" id="Name" name="Name" placeholder="Имя">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-20" data-validate="Введите отчество">
+
+                <input class="input100" type="text" id="MiddleName" name="MiddleName" placeholder="Отчество">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-20" data-validate="Введите дату рождения">
+                <input type="text" class="input100 datepicker-here" id="BirthDay" name="BirthDay" placeholder="Дата рождения" readonly="readonly" data-position='right top'>
+                <span class="focus-input100"></span>
+            </div>
+            @Html.ValidationMessageFor(model => model.BirthDay, "", new { @class = "text-danger" })
+
+            <div class="wrap-input100 validate-input m-b-20" data-validate="Введите телефон">
+
+                <input class="input100" type="text" id="Telephone" name="Telephone" placeholder="Телефон">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+
+                <input class="txt input100" type="text" name="Mail" placeholder="E-mail">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-25" data-validate="Enter password">
+                <input class="input100" type="password" name="Password" placeholder="Пароль" autocomplete="new-password">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="container-login100-form-btn">
+                <button class="login100-form-btn">
+                    Зарегистироваться
+                </button>
+            </div>
+        }
+    </div>
+</div>
+@Styles.Render("~/Content/datepicker.css")
+@Styles.Render("~/Content/Eror.css")
+@*@section Scripts {
+        <script type="text/javascript" src="~/Scripts/jquery-3.4.1.js">
+        </script>
+        @Scripts.Render("~/Scripts/Create.js")
+    }*@
