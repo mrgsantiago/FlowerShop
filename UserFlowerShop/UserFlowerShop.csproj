@@ -212,8 +212,11 @@
     <Content Include="img\navbar-logo.png" />
     <Content Include="img\navbar-logo.svg" />
     <Content Include="img\Orange.png" />
+    <Content Include="img\podtver.png" />
+    <Content Include="img\poluhenie.png" />
     <Content Include="img\Provence.png" />
     <Content Include="img\Romahka.png" />
+    <Content Include="img\tracking.png" />
     <Content Include="img\TravelM.png" />
     <Content Include="Models\Flower.edmx.diagram">
       <DependentUpon>Flower.edmx</DependentUpon>
