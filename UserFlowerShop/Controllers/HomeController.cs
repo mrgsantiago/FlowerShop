@@ -24,6 +24,13 @@ namespace UserFlowerShop.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Login", "Home");
         }
+        [HttpPost]
+        public ActionResult CheckAuthenticated()
+        {
+            if (User.Identity.IsAuthenticated) return Json(new { check = true });
+            else return Json(new { check = false });
+
+        }
         [AllowAnonymous]
         public ActionResult Login()
         {
@@ -34,30 +41,34 @@ namespace UserFlowerShop.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Login(Users model, string returnUrl)
+        public ActionResult Login(string Login, string Password)
         {
-            if (ModelState.IsValid)
-            {
+            
                 //string FormHash = GetMD5Hash(model.Password);
-                var user = db.Users.FirstOrDefault(u => u.Mail == model.Mail && u.Password == model.Password);
+                var user = db.Users.FirstOrDefault(u => u.Mail == Login && u.Password == Password);
                 if (user == null)
                 {
-                    ModelState.AddModelError("", "Пользователя с таким логином и паролем не существует");
+                    var login = db.Users.FirstOrDefault(u => u.Mail == Login);
+                    bool LoginCheck = true, PasswordCheck = true;
+                    if (login != null)
+                    {
+                        LoginCheck = true;
+                        PasswordCheck = false;
+                    }
+                    else
+                    {
+                        PasswordCheck = true;
+                        LoginCheck = false;
+                    }
+                    return Json(new { LoginCheck, PasswordCheck, AllResult = false });
                 }
                 else
                 {
-
-                    FormsAuthentication.SetAuthCookie(model.Mail, false);
-                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                        return Redirect(returnUrl);
-                    else
-                        return RedirectToAction("Index");
-
+                    FormsAuthentication.SetAuthCookie(Login, false);
+                    //Session["Menu"] = null;
+                    return Json(new { LoginCheck = "", PasswordCheck = "", AllResult = true });
                 }
-            }
-            return View(model);
+
         }
         public ActionResult About()
         {

@@ -1,0 +1,136 @@
+﻿@model IEnumerable<UserFlowerShop.Models.BasketContent>
+
+@{
+    ViewBag.Title = "Index";
+}
+<section class="BasketGragient" id="Basket">
+        <div class="BasketLine">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-Basket">Ваша корзина</h2>
+                </div>
+                <table class="table tableBasket">
+                    <tr>
+                        <th>
+                            Продукт
+                        </th>
+                        <th>
+                            Количество
+                        </th>
+                        <th>
+                            Стоимость
+                        </th>
+                        <th>
+
+                        </th>
+
+                    </tr>
+                    @{
+                        decimal AllPrice = 0;}
+                    @foreach (var item in Model)
+                    {
+
+
+                        List<SelectListItem> list = new List<SelectListItem>();//Список значений для DDL
+                        List<SelectListItem> list2 = new List<SelectListItem>();//Список значений для DDL
+
+                        for (int i = 1; i <= item.Goods.Quantity; i++)
+                        {
+                            if (i == item.Quantity)
+                            {
+                                list.Add(new SelectListItem() { Text = i.ToString(), Value = i.ToString(), Selected = true });//Заполняем его
+                            }
+                            else
+                            {
+                                list.Add(new SelectListItem() { Text = i.ToString(), Value = i.ToString(), Selected = false });//Заполняем его
+                            }
+                        }
+
+                        <tr>
+                            <td align="left">
+                                <img src="~/img/@Html.DisplayFor(modelItem => item.Goods.Image)" /> <span>@Html.DisplayFor(modelItem => item.Goods.Name)</span>
+                            </td>
+                            <td align="center">
+                                @Html.DropDownList("AmountList", list, htmlAttributes: new { @class = "form-control DropAmount", @id = @Html.DisplayFor(modelItem => item.IDGoods) })
+
+
+                            </td>
+                            <td align="center">
+                                @{string price = @Html.DisplayFor(modelItem => item.Price).ToString();
+                                }
+
+                                <span class="ForPrice" id="@Html.DisplayFor(modelItem => item.IDGoods)">@price.Remove(price.Length - 3, 3)</span>
+
+
+                                @{
+                                    AllPrice += Convert.ToDecimal(item.Price);
+                                }
+                            </td>
+                            <td align="center" >
+                                @*@Html.ActionLink("Delete", "Delete", new { id = item.ID })*@
+                                <button class="btn btn-primary btnDelete" id="@Html.DisplayFor(m => item.ID)" onclick="DeleteProduct(this)"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+
+                            </td>
+                        </tr>
+
+                    }
+
+                </table>
+                @{
+                    string EndPrice;
+                    if (AllPrice != 0)
+                    {
+                        EndPrice = AllPrice.ToString().Remove(AllPrice.ToString().Length - 5, 5);
+                    }
+                    else
+                    {
+                        EndPrice = "0";
+                    }
+
+                }
+                <span>Общая сумма: </span> <span id="ForAllPrice"> @EndPrice</span> <span> руб.</span>
+                @Html.DropDownList("IssuePoints", null, htmlAttributes: new { @class = "form-control", @id = "DropIssuePoints" })
+                @Html.DropDownList("PayMethod", null, htmlAttributes: new { @class = "form-control", @id = "DropPayMethod" })
+                <button class="btn btnModal" onclick="AddOrder()">Оформить заказ</button>
+            </div>
+
+ 
+   </div>
+</section>
+
+         <div id="DeleteProduct" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>Вы действительно хотите удалить этот товар?</p>
+                            <div class="row">
+                                <div class="col-4">
+                                    <button class="btn btnModal" onclick="EndDelete(this)">Удалить</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btnModal" onclick="CancelDelete()">Отмена</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div id="CreateOrder" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-center CompleteReg" style="color:white!important">
+                            <button type="button" class="close" data-dismiss="modal" style="outline:none!important" aria-label="Close">
+                                <span aria-hidden="true" style="color: black !important; font-size: 2rem">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Ваш заказ успешно оформлен</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/Basket.js"></script>

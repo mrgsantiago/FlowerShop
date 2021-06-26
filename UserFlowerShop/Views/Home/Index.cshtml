@@ -1,109 +1,140 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<link href="~/Content/Goods.css" rel="stylesheet" />
 <div class="backrground_body">
-
-    <header class="masthead" id="home">
-        <div class="container">
-            <div class="header-text-right">
-                <div class="row justify-content-end ">
-                    <div class=" col-3 col-sm-4 col-md-3 "> <img class="test" src="~/img/woman.png" /></div>
-                    <div class="col-8 col-sm-8 col-md-9 whiters mt-10 align-items-center txtZAGL">
-                        <p>
-                            Дарите эмоции! Передайте свои чувства цветами.
-                        </p>
-                        <p class="psmall">Там где есть любовь - слов всегда мало. </p>
+    <div class="backrground_line">
+        <header class="masthead" id="home">
+            <div class="container">
+                <div class="header-text-right">
+                    <div class="row justify-content-end ">
+                        <div class=" col-3 col-sm-4 col-md-3 ">  <img class="test" src="~/img/woman.png" style="border:none!important" /></div>
+                        <div class="col-8 col-sm-8 col-md-9 whiters mt-10 align-items-center txtZAGL">
+                            <p>
+                                Дарите эмоции! Передайте свои чувства цветами.
+                            </p>
+                            <p class="psmall">Там где есть любовь - слов всегда мало. </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="page-section" id="using">
-        <div class="container">
+        <section class="slideBTN-section" id="vbor">
             <div class="text-center">
-                <h2 class="section-heading">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+                <p class="section-heading chek">ЧАСТЫЙ ВЫБОР</p>
             </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <img src="~/img/podtver.png" alt="database">
-                    <h4 class="my-3 text-uppercase">Подтверждение</h4>
-                    <p class="text-muted">Уточните детали Вашей заявки и подтвердите заказ по звонку менеджера</p>
+            <div class="jsx-4236681003 jsx-606958059 container-viewport">
+                <div class="jsx-4236681003 jsx-606958059 category-container">
+                    <button class="jsx-4236681003 jsx-606958059 category" id="8" onclick="LoadGoods(this) ">
+                        <h4 class="jsx-2308871751 quaternary-heading" onclick="ClickButton(this) " style="font-weight:bold">
+                            <ya-tr-span data-index="170-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Shoes" data-translation="Туфли" data-type="trSpan">Монобукеты</ya-tr-span>
+                        </h4>
+                    </button>
+                    <button class="jsx-4236681003 jsx-606958059 MobileCarousel__category" id="6" onclick="LoadGoods(this)">
+                        <h4 class="jsx-2308871751 quaternary-heading" onclick="ClickButton(this)">
+                            <ya-tr-span data-index="171-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Apparel" data-translation="Одежда" data-type="trSpan">Сухоцветы</ya-tr-span>
+                        </h4>
+                    </button>
+                    <button class="jsx-4236681003 jsx-606958059 MobileCarousel__category" id="11" onclick="LoadGoods(this)">
+                        <h4 class="jsx-2308871751 quaternary-heading" onclick="ClickButton(this)">
+                            <ya-tr-span data-index="171-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Apparel" data-translation="Одежда" data-type="trSpan">Игрушки</ya-tr-span>
+                        </h4>
+                    </button>
                 </div>
-                <div class="col-md-4">
-                    <img src="~/img/tracking.png" alt="list">
-                    <h4 class="my-3 text-uppercase">Доставка</h4>
-                    <p class="text-muted">
-                        Бесплатная доставка
-                        в любую точку самовывоза
-                        в Новосибирске
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <img src="~/img/poluhenie.png" alt="analytics">
-                    <h4 class="my-3 text-uppercase">Получение</h4>
-                    <p class="text-muted">
-                        Вы можете забрать заказ после получения  письма
-                        на электронную почту
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="slaide-section" id="slaider">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide SliderFirst" data-ride="carousel">
-
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="5000">
-                    <img src="~/Content/Images/BackgroundSlider/Slide_1.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption ForTextBlock d-md-block">
-                        <h5 class="HeadSlider">Присоединяйся <br /> к нашей команде</h5>
-                        <p class="TextSlider">Приобретай пакеты тренировок со скидкой прямо сейчас<br /> и погружайся в мир спорта с лучшими упражнениями и тренерами</p>
-                    </div>
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img src="~/Content/Images/BackgroundSlider/Slide_2.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption ForTextBlock d-md-block">
-                        <h5 class="HeadSlider">Всегда на связи</h5>
-                        <p class="TextSlider">Наши специалисты в сфере тренировок <br /> готовы быстро отреагировать и дать нужный совет</p>
-                    </div>
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img src="~/Content/Images/BackgroundSlider/Slide_3.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption ForTextBlock  d-md-block">
-                        <h5 class="HeadSlider">Большой выбор тренировок</h5>
-                        <p class="TextSlider">Более тысячи тренировок и упражнений <br />отобрано конкретно для тебя </p>
-                    </div>
-                </div>
+                <hr style="width:50%; background-color:white!important; height:1px!important; margin-top:-5px " />
 
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-slide="prev">
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-slide="next">
-            </a>
-        </div>
-    </section>
-    <section class="page-section" id="our">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading">О НАС</h2>
+
+            @{string idCategory = "8"; }
+            <div class="container BlockGoods" id="ElementGoods">
+                @Html.Action("ElementGoods", "Goods", new { id = idCategory })
             </div>
-            <div class="whiteframe">
+        </section>
+
+        <section class="page-section" id="using">
+            <div class="container whiters-page">
+                <div class="text-center">
+                    <p class="section-heading">ОФОРМЛЕНИЕ ЗАКАЗА</p>
+                </div>
                 <div class="row text-center">
-                    <div class="col-sm-8 offset-sm-2 col-10 offset-1">
-                       
-                        <p class="">
-                            Наша компания занимается цветами более 5 лет. Работа происходит напрямую, минуя посредников, за счёт этого наши клиенты получаею цветы по доступным&nbsp;ценам.
-                           
-                           
+                    <div class="col-md-4">
+                        <img src="~/img/podtver.png" alt="database">
+                        <h4 class="my-3 text-page3">Подтверждение</h4>
+                        <p class="text-muted">Уточните детали <br /> Вашей заявки и <br /> подтвердите заказ по <br /> звонку менеджера</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="~/img/tracking.png" alt="list">
+                        <h4 class="my-3 text-page3">Доставка</h4>
+                        <p class="text-muted">
+                            Бесплатная доставка <br /> в любую точку <br /> самовывоза <br /> в Новосибирске
                         </p>
-                        <p> Мы занимаемся флористикой любого уровня сложности, от самых простых букетов до свадебного оформления</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="~/img/poluhenie.png" alt="analytics">
+                        <h4 class="my-3 text-page3">Получение</h4>
+                        <p class="text-muted">
+                            Вы можете забрать <br /> заказ после получения <br /> письма <br /> на электронную почту
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @*<section class="slaide-section" id="slaider">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide SliderFirst" data-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="5000">
+                        <img src="~/Content/Images/BackgroundSlider/Slide_1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption ForTextBlock d-md-block">
+                            <h5 class="HeadSlider">Присоединяйся <br /> к нашей команде</h5>
+                            <p class="TextSlider">Приобретай пакеты тренировок со скидкой прямо сейчас<br /> и погружайся в мир спорта с лучшими упражнениями и тренерами</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="~/Content/Images/BackgroundSlider/Slide_2.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption ForTextBlock d-md-block">
+                            <h5 class="HeadSlider">Всегда на связи</h5>
+                            <p class="TextSlider">Наши специалисты в сфере тренировок <br /> готовы быстро отреагировать и дать нужный совет</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="~/Content/Images/BackgroundSlider/Slide_3.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption ForTextBlock  d-md-block">
+                            <h5 class="HeadSlider">Большой выбор тренировок</h5>
+                            <p class="TextSlider">Более тысячи тренировок и упражнений <br />отобрано конкретно для тебя </p>
+                        </div>
                     </div>
 
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-slide="prev">
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-slide="next">
+                </a>
             </div>
-          
-        </div>
-    </section>
+        </section>*@
+        <section class="page-section" id="our">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading">О НАС</h2>
+                </div>
+                <div class="whiteframe">
+                    <div class="row text-center">
+                        <div class="col-sm-8 offset-sm-2 col-10 offset-1">
+
+                            <p class="">
+                                Наша компания занимается цветами более 5 лет. Работа происходит напрямую, минуя посредников, за счёт этого наши клиенты получаею цветы по доступным&nbsp;ценам.
+
+
+                            </p>
+                            <p> Мы занимаемся флористикой любого уровня сложности, от самых простых букетов до свадебного оформления</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
 </div>
+<script src="~/Scripts/ForGoods.js"></script>

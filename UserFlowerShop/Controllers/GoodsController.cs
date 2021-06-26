@@ -17,9 +17,23 @@ namespace UserFlowerShop.Controllers
         // GET: Goods
         public ActionResult Index()
         {
-            var goods = db.Goods.Include(g => g.Categories).Include(g => g.Manufacturer);
-            return View(goods.ToList());
+            var categoryes = db.Categories;
+            return View(categoryes.ToList());
         }
+
+        public ActionResult ElementGoods(string id)
+        {
+            int IDCategory = Convert.ToInt32(id);
+            var goods = db.Goods.Where(p => p.IdCategory == IDCategory);
+            return PartialView(goods.ToList());
+        } 
+        public ActionResult LoadInfoGoods(string id)
+        {
+            int IDGood = Convert.ToInt32(id);
+            var good = db.Goods.Where(p => p.ID == IDGood).FirstOrDefault() ;
+            return PartialView(good);
+        }
+
 
         // GET: Goods/Details/5
         public ActionResult Details(int? id)

@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\Марго\source\repos\UserFlowerShop\UserFlowerShop\Models\Flower.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\Марго\Desktop\1\UserFlowerShop\UserFlowerShop\Models\Flower.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

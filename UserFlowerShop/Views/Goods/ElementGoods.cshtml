@@ -1,0 +1,55 @@
+﻿@model IEnumerable<UserFlowerShop.Models.Goods>
+
+@if (Model != null)
+{
+    <div class="row d-flex linebottom mb-4 justify-content-between">
+        @foreach (var item in Model)
+         {
+            <div class="whiters-scrol">
+                <div class="col-lg-12 text-center mt-2 ">
+
+                    <a onclick="InfoGoods(this)" id="@item.ID" class="item-hover">
+                        <img class="img-scrol" src="~/img/@Html.DisplayFor(modelItem => item.Image)" />
+                    </a>
+                    <p class="name">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </p>
+                    <p class="down d-flex justify-content-center">
+                        <span>
+                            @if (item.Availability == true)
+                            {
+                                <span class="yes fonts"><b> В наличии</b></span>
+                            }
+                            else
+                            {
+                                <span class="no fonts text-center">
+                                    <b>Не в наличии</b>
+                                </span>
+                            }
+                        </span>
+
+
+                    </p>
+                    @{string price = @Html.DisplayFor(modelItem => item.Price).ToString();
+                    }
+                    <span class="">
+
+                        <span class="price">
+                            @price.Remove(price.Length - 3, 3)
+                            &#8381;
+                        </span>
+                    </span>
+                    <div class="text-center mb-2">
+                        <a onclick="InfoGoods(this)" id="@item.ID" class="item-hover">
+                            Подробнее <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                    
+                    @*<hr class="linebottom"/>*@
+                </div>
+            </div>
+
+         }
+
+    </div>
+}

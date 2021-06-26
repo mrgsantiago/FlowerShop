@@ -60,7 +60,7 @@ section {
 
 body {
     margin: 0;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: "Comfortaa", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -535,7 +535,8 @@ sup {
 }
 
 .name {
-    margin-bottom: 4rem;
+    margin-bottom: 0.5rem !important;
+    font-size: 1.2rem;
 }
 
 a {
@@ -2249,7 +2250,7 @@ pre {
     .table th,
     .table td {
         padding: 0.75rem;
-        vertical-align: top;
+        vertical-align: middle;
         border-top: 1px solid #dee2e6;
     }
 
@@ -11364,7 +11365,7 @@ button.bg-dark:focus {
     text-transform: lowercase !important;
 }
 
-.text-uppercase {
+.my-3 text-uppercase {
     text-transform: uppercase !important;
 }
 
@@ -11477,7 +11478,7 @@ a.text-dark:focus {
 }
 
 .text-muted {
-    color: #6c757d !important;
+    color: black !important;
 }
 
 .text-black-50 {
@@ -11758,7 +11759,7 @@ img::-moz-selection {
 
                 #mainNav.navbar-shrink .navbar-brand svg,
                 #mainNav.navbar-shrink .navbar-brand img {
-                    height: 1rem;
+                    height: 2rem;
                 }
 
         #mainNav .navbar-nav .nav-item {
@@ -12850,8 +12851,23 @@ section#contact form#contactForm :-ms-input-placeholder {
     border-radius: 40px;
    /* margin: auto;*/
 }
-.whiters p{
-    margin: 0 ;
+.whiters-page {
+    padding: 3% 1%;
+    background-color: white;
+    box-shadow: 5px 10px 30px 5px rgba(99, 81, 67, 0.15);
+    border-radius: 40px;
+}
+.whiters-scrol {
+    font-size: 1.3rem;
+    background-color: white;
+    box-shadow: 5px 10px 30px 5px rgba(99, 81, 67, 0.15);
+    border-radius: 40px;
+}
+.fonts{
+    font-size: 1rem;
+}
+.whiters p {
+    margin: 0;
 }
 .psmall{
     font-size: 1.61rem;
@@ -12863,8 +12879,23 @@ section#contact form#contactForm :-ms-input-placeholder {
     background-attachment: scroll;
     background-size: 100%;
 }
-.txtZAGL{
+.backrground_line {
+    background: url("../img/LINEglav.png");
+    background-repeat: no-repeat;
+}
+.backrground_catalog {
+    background: url("../img/gradientCATALOG.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100%;
+}
+.backrground_LineCatalog {
+    background: url("../img/LINEcatalog.png");
+    background-repeat: no-repeat;
+}
+.txtZAGL {
     color: black;
+    font-family: Montserrat;
 }
 #our h2.section-heading {
     margin-bottom:1.5rem;
@@ -12877,4 +12908,141 @@ section#contact form#contactForm :-ms-input-placeholder {
     background-size: 100%;
     padding: 3rem 1rem 10rem 1rem; 
     font-size: 1.9rem;
+}
+.page-section {
+    font-family: 'Comfortaa', cursive;
+}
+.section-heading {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.text-page3 {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: bold;
+}
+
+.container-viewport {
+    overflow-x: scroll;
+    cursor: grab;
+    scroll-behavior: smooth;
+}
+.category-container {
+    display: inline-flex;
+    min-width: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+.category {
+    opacity: 1;
+    transition: opacity 250ms ease 0s;
+    border-bottom-color: rgb(33, 42, 47);
+}
+.jsx-606958059 {
+    padding: 5px 50px 6px;
+    background-color: transparent;
+    transform: translateY(2px);
+    cursor: pointer;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    white-space: nowrap;
+    flex-shrink: 0;
+    outline: inherit;
+    border-bottom: 2px solid transparent;
+    margin: 0px;
+}
+.quaternary-heading {
+    font-weight: 100;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+.chek {
+    font-weight: bold;
+    color: white;
+}
+
+/*модальное окно*/
+.Head-modal {
+    font-family: "Montserrat";
+}
+.NameHead {
+}
+
+.PriceHead {
+    color: rgba(235, 87, 87, 0.8);
+    font-size: 1.3rem;
+}
+.DescriptionGood {
+    color: #7C7C7C;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    font-size: 1.2rem;
+    text-align: left;
+}
+.lineOpis {
+    border-bottom: 1px solid #E5E5E5;
+}
+.btnModal {
+    background: #8F87D8;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.9rem;
+    height: 40px;
+}
+
+
+
+/*корзина*/
+.BasketGragient {
+    font-family: 'Comfortaa';
+    background: url("../img/gradientCATALOG.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100%;
+}
+.BasketLine {
+    background: url("../img/LINEcatalog.png");
+    background-repeat: no-repeat;
+}
+.section-Basket {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+}
+.tableBasket th {
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+    background: rgba(143, 135, 216, 0.72);
+}
+.tableBasket tr {
+    background: #FFFFFF;
+    box-shadow: 5px 10px 30px 5px rgba(99, 81, 67, 0.15);
+}
+.btnDelete {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border: 0px solid black !important;
+    box-sizing: border-box;
+    color: black !important;
+    font-weight: 600 !important;
+    font-style: normal;
+    font-size: 1rem;
+    height: 40px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    width: 30px !important;
+    box-shadow: none !important;
 }

@@ -1,0 +1,72 @@
+﻿@model UserFlowerShop.Models.Goods
+
+@if (Model != null)
+{
+    <span class="d-none" id="MaxCount">@Model.Quantity</span>
+    <span class="d-none" id="IDGood">@Model.ID</span>
+
+    <div class="container">
+        <div class="Head-modal text-center">
+            <div class="ModalContent row ">
+                <div class="col-5">
+                    <img src="~/img/@Model.Image" class="img-fluid" />
+                </div>
+                <div class="col-7">
+                    <div class="lineOpis">
+                        <h3 class="NameHead">@Model.Name</h3>
+                        <p class="PriceHead">@Model.Price.ToString().Remove(@Model.Price.ToString().Length - 5, 5) &#8381;</p>
+                    </div>
+                    <p class="DescriptionGood"> @Model.Description</p>
+                </div>
+
+            </div>
+
+            <div class="ModalFooter">
+                <div class="input-group mb-3 mx-auto GroupInput">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary minus" type="button" onclick="ClickMinus(this)"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                    </div>
+                    <input type="text" readonly="readonly" value="1" class="form-control CurrentResult text-center" id="CurrentWeight">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary plus" type="button" onclick="ClickPlus(this)"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <button class="btn btnModal" onclick="AddInBasket()">Добавить в корзину</button>
+            </div>
+        </div>
+
+
+    </div>
+}
+
+@*<div id="ModalOfBasket" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-center CompleteReg" style="color:white!important">
+                    <button type="button" class="close" data-dismiss="modal" style="outline:none!important" aria-label="Close">
+                        <span aria-hidden="true" style="color: black !important; font-size: 2rem">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Товар успешно добавлен в корзину!</p>
+                    <button class="btn LoginBtn">Перейти к корзине</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>*@
+<div id="ModalErrorForCount" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-center CompleteReg" style="color:white!important">
+                <button type="button" class="close" style="outline:none!important" onclick="CloseNoPresence()" id="ClosePresence">
+                    <span aria-hidden="true" style="color: black !important; font-size: 2rem">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Товара нет в наличии!</p>
+            </div>
+        </div>
+    </div>
+</div>

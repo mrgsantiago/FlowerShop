@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SILKEN интернет-магазин цветов</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
     @Styles.Render("~/Content/MainCSS.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -29,10 +31,10 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="~/Home/Index" target="_self">Главная</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="~/Goods/Index" target="_self">Каталог товаров</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#advantages" target="_self">О нас</a></li>
-                        <li class="nav-item hidi"><a class="nav-link js-scroll-trigger icon ml-5 " href="/Home/Logout" target="_self" title="Выход"><i class="fas fa-user-alt"></i> </a></li>
-                        <li class="nav-item hidi"><a class="nav-link js-scroll-trigger icon " href="#contact" target="_self" title="Корзина"><i class="das fas fa-shopping-basket"></i> </a></li>
+                        <li class="nav-item hidi"><a class="nav-link js-scroll-trigger icon ml-5 " href="~/Home/Logout" target="_self" title="Выход"><i class="fas fa-user-alt"></i> </a></li>
+                        <li class="nav-item hidi"><a class="nav-link js-scroll-trigger icon " href="~/BasketContents/Index"  title="Корзина"><i class="das fas fa-shopping-basket"></i> </a></li>
                         <li class="nav-item dispForIcon" style="display: none"><a class="nav-link js-scroll-trigger" href="#using" target="_self">Корзина</a></li>
-                        <li class="nav-item dispForIcon" style="display: none"><a class="nav-link js-scroll-trigger" href="/Home/Logout" target="_self">Выход</a></li>
+                        <li class="nav-item dispForIcon" style="display: none"><a class="nav-link js-scroll-trigger" href="~/Home/Logout" target="_self">Выход</a></li>
 
                     }
                     else
@@ -40,8 +42,8 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="~/Home/Index" target="_self">Главная</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="~/Goods/Index" target="_self">Каталог товаров</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#advantages" target="_self">О нас</a></li>
-                        <li class="nav-item dispForIcon" style="display:none"><a class="nav-link js-scroll-trigger " data-toggle="modal" data-target="#exampleModalCenter">Вход</a></li>
-                        <li class="nav-item hidi"><a class="nav-link js-scroll-trigger icon ml-5" data-toggle="modal" data-target="#exampleModalCenter" style="cursor:pointer" title="Вход"><i class="fas fa-user-alt"></i> </a></li>
+                        <li class="nav-item dispForIcon" style="display:none"><a class="nav-link js-scroll-trigger " href="~/Home/Login">Вход</a></li>
+                        <li class="nav-item hidi"><a class="nav-link js-scroll-trigger icon ml-5" href="~/Home/Login" style="cursor:pointer" title="Вход"><i class="fas fa-user-alt"></i> </a></li>
 
                     }
 
@@ -54,23 +56,104 @@
 
     <footer class="footer py-4">
         <div class="container-fluid">
-                <div class="col-lg-4 offset-lg-2 text-lg-left">
-                    <p class="forfoother mb-2 ">
-                        &copy; ООО ”SILKEN” Новосибирск
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                    </p>
-                </div>
+            <div class="col-lg-4 offset-lg-2 text-lg-left">
+                <p class="forfoother mb-2 ">
+                    &copy; Авторское право
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    SILKEN. Все права защищены.
+                </p>
+            </div>
         </div>
     </footer>
 
+
+
+    <div class="modal fade bd-example-modal-lg" id="ModalInfoGood" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                @*<div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Информация о товаре</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>*@
+                <div class="modal-body" id="LoadInfoGoods">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalLoginError" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-center CompleteReg" style="color:white!important">
+                    <button type="button" class="close" data-dismiss="modal" style="outline:none!important" aria-label="Close">
+                        <span aria-hidden="true" style="color: black !important; font-size: 2rem">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Для того, чтобы добавить товар в корзину, пожалуйста, авторизуйтесь!
+
+                    </p>
+                    <button class="btn">Перейти ко входу</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalOfBasket" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-center CompleteReg" style="color:white!important">
+                    <button type="button" class="close" data-dismiss="modal" style="outline:none!important" aria-label="Close">
+                        <span aria-hidden="true" style="color: black !important; font-size: 2rem">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Товар успешно добавлен в корзину!</p>
+                    <button class="btn">Перейти к корзине</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="ModalLimit" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-center CompleteReg" style="color:white!important">
+                    <button type="button" class="close" data-dismiss="modal" style="outline:none!important" aria-label="Close">
+                        <span aria-hidden="true" style="color: black !important; font-size: 2rem">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Максимальное количество товара, которое вы можете добавить:
+                        <span id="limit"></span>
+                    </p>
+                    <button class="btn LoginBtn">Перейти к корзине</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
+    <script src="~/Scripts/bootstrap-scrollspy.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="~/Scripts/ForGoods.js"></script>
+    <script src="~/Scripts/Scripts.js"></script>
     @RenderSection("scripts", required: false)
 
 </body>
