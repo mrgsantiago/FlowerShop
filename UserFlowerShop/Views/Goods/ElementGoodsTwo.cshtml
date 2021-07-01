@@ -1,11 +1,12 @@
 ﻿@model IEnumerable<UserFlowerShop.Models.Goods>
 
 @if (Model != null)
-{
+ {
     <div class="row d-flex linebottom mb-4 justify-content-between">
+
         @foreach (var item in Model)
          {
-            <div class="whiters-scrol">
+            <div class="whiters-scrol2">
                 <div class="col-lg-12 text-center mt-2 ">
 
                     <a onclick="InfoGoods(this)" id="@item.ID" class="item-hover">
@@ -14,7 +15,7 @@
                     <p class="name">
                         @Html.DisplayFor(modelItem => item.Name)
                     </p>
-                    <p class="down d-flex justify-content-center">
+                    <p class="down d-flex justify-content-center Availability">
                         <span>
                             @if (item.Availability == true)
                             {
@@ -44,12 +45,9 @@
                             Подробнее <i class="fas fa-angle-right"></i>
                         </a>
                     </div>
-                    
-                    @*<hr class="linebottom"/>*@
                 </div>
             </div>
-
          }
-
     </div>
-}
+ }
+

@@ -140,7 +140,7 @@ blockquote {
 
 b,
 strong {
-    font-weight: bolder;
+    font-weight: normal;
 }
 
 small {
@@ -995,7 +995,6 @@ pre {
     padding: 0;
 }
 
-
 @media (min-width: 576px) and (max-width:768px) {
     .header-row {
         flex-direction: column;
@@ -1008,11 +1007,15 @@ pre {
         padding-top: 6%!important;
     }
     .whiteframe {
-        font-size: 0.85rem !important;
+        font-size: 1.12rem !important;
         padding-top: 2rem !important;
+        background-size: 100% !important;
     }
-    .test{
-      width:  140%!important;
+    .about-page{
+        display:none;
+    }
+    .test {
+        width: 140% !important;
     }
 
     .mt-10{
@@ -12792,25 +12795,25 @@ section#contact form#contactForm .form-control:focus {
 section#contact form#contactForm ::-webkit-input-placeholder {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
-    color: #ced4da;
+    color: black;
 }
 
 section#contact form#contactForm :-moz-placeholder {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
-    color: #ced4da;
+    color: black;
 }
 
 section#contact form#contactForm ::-moz-placeholder {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
-    color: #ced4da;
+    color: black;
 }
 
 section#contact form#contactForm :-ms-input-placeholder {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
-    color: #ced4da;
+    color: black;
 }
 
 .icon svg {
@@ -12862,9 +12865,19 @@ section#contact form#contactForm :-ms-input-placeholder {
     background-color: white;
     box-shadow: 5px 10px 30px 5px rgba(99, 81, 67, 0.15);
     border-radius: 40px;
+    width: 32%;
+    margin-bottom: 5%;
 }
-.fonts{
-    font-size: 1rem;
+.whiters-scrol2 {
+    font-size: 1.3rem;
+    background-color: white;
+    box-shadow: 5px 0px 30px 5px rgba(99, 81, 67, 0.15);
+    border-radius: 40px;
+    width: 25%;
+
+}
+.fonts {
+    font-size: 1.1rem;
 }
 .whiters p {
     margin: 0;
@@ -12875,13 +12888,14 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 .backrground_body {
     background: #99bde7 url("../img/gradient.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: scroll;
-    background-size: 100%;
+    background-size: cover;
 }
 .backrground_line {
     background: url("../img/LINEglav.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-size: cover;
 }
 .backrground_catalog {
     background: url("../img/gradientCATALOG.png");
@@ -12930,7 +12944,7 @@ section#contact form#contactForm :-ms-input-placeholder {
     cursor: grab;
     scroll-behavior: smooth;
 }
-.category-container {
+.section-heading-container {
     display: inline-flex;
     min-width: 100%;
     -webkit-box-pack: center;
@@ -12970,7 +12984,16 @@ section#contact form#contactForm :-ms-input-placeholder {
     font-weight: bold;
     color: white;
 }
-
+.img-Goods {
+    width: 95%;
+    padding-top: 3%;
+    border-radius: 25px;
+    margin-bottom: 6%;
+}
+.img-Goodss {
+    width: 85%;
+    border-radius: 10px;
+}
 /*модальное окно*/
 .Head-modal {
     font-family: "Montserrat";
@@ -12999,6 +13022,7 @@ section#contact form#contactForm :-ms-input-placeholder {
     font-size: 0.9rem;
     height: 40px;
 }
+
 
 
 
@@ -13046,3 +13070,681 @@ section#contact form#contactForm :-ms-input-placeholder {
     width: 30px !important;
     box-shadow: none !important;
 }
+
+
+/*Слайдер
+*/
+.TextBlockFirst {
+    color: white !important;
+    font-family: 'Domotika-Pro' !important;
+    font-weight: bold;
+    font-size: 2.3rem;
+    text-align: justify !important;
+    line-height: 120%;
+    letter-spacing: 2.8px;
+}
+
+.TextBlockSecond {
+    color: white !important;
+    font-family: 'Domotika-Pro' !important;
+    font-weight: bold;
+    font-size: 2.3rem;
+    text-align: justify !important;
+    line-height: 110%;
+    letter-spacing: 5.3px;
+}
+
+.TextBlockThird {
+    color: white !important;
+    font-family: 'Domotika-Pro' !important;
+    font-weight: 100 !important;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 5%;
+}
+
+.BtnMoreInfo {
+    width: 50%;
+    border-radius: 50px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    color: #1A1616 !important;
+    font-family: 'Domotika-Pro' !important;
+    font-weight: 400 !important;
+    font-size: 1.2rem;
+    border: none !important;
+    margin-top: 8%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.SecondContainer, .FourthContainer {
+    height: auto;
+    margin-top: 20%;
+}
+
+.SecondContainer {
+    margin-bottom: 15%;
+}
+
+.FifthContainer {
+    margin-top: 7%;
+}
+
+
+.HeadAdvantages {
+    color: white !important;
+    font-family: 'Domotika-Pro' !important;
+    font-weight: 700 !important;
+    font-style: normal;
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+}
+
+.ImgAdvantages {
+    width: 130px;
+    height: 130px;
+}
+
+.HeadTextAdventages {
+    color: white !important;
+    font-family: 'Domotika-Pro' !important;
+    font-weight: 700 !important;
+    font-style: normal;
+    font-size: 1.7rem;
+}
+
+.MainTextAdvantages {
+    color: white !important;
+    font-family: 'Domotika-Pro' !important;
+    font-weight: 300 !important;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.ForTextBlock {
+    right: 0%;
+    width: 40% !important;
+    bottom: 1.25rem;
+    left: 5% !important;
+    bottom: 40% !important;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center !important;
+}
+
+.HeadSlider {
+    color: white !important;
+    font-family: 'Domotika-Pro' !important;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 120%;
+    letter-spacing: 2.8px;
+}
+
+.TextSlider {
+    color: white !important;
+    font-family: 'Domotika-Pro' !important;
+    font-weight: 100 !important;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.FourthContainer {
+    height: auto;
+    margin-top: 5%;
+}
+
+.ImgFeedback {
+    width: 200px;
+    height: 200px;
+}
+
+.ForStarsIcon {
+    color: #FAC45B;
+    font-size: 22px;
+}
+
+
+.HeaderPosts {
+    color: white !important;
+    font-weight: 700 !important;
+    font-style: normal;
+    font-size: 1.9rem;
+    margin-bottom: 50px;
+}
+
+.ContentPosts {
+    color: white !important;
+    font-weight: 300 !important;
+    font-style: normal;
+    font-size: 1.05rem;
+    text-align: left;
+}
+.kars {
+    margin-top: 3% !important;
+}
+
+.HeadPosts {
+    font-family: "Comfortaa" !important;
+    color: white !important;
+    font-weight: 400 !important;
+    font-style: normal;
+    font-size: 2rem;
+    margin-bottom: 3% !important;
+}
+
+.ImgPost {
+    max-height: 550px;
+    width: auto;
+}
+
+.MoreInfoSlider {
+    width: 40%;
+    border-radius: 50px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    color: #1A1616 !important;
+    font-weight: 400 !important;
+    font-size: 1.2rem;
+    border: none !important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.control-next, .control-prev {
+    position: relative;
+    /*left: 10%;*/
+    display: inline-flex;
+    height: 3% !important;
+    width: 3% !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+/*    position: absolute !important;*/
+    top: 0 !important;
+    bottom: 0 !important;
+    z-index: 1 !important;
+/*    display: flex !important;*/
+    align-items: center !important;
+    justify-content: center !important;
+    width: 10% !important;
+    padding: 0 !important;
+    color: #fff !important;
+    text-align: center !important;
+    background: none !important;
+    border: 0 !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.15s ease !important;
+}
+.btnModalcarousel {
+    background: rgba(217, 63, 121, 1);
+    text-transform: uppercase;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 7px 10px 40px 5px rgba(169, 82, 19, 0.2);
+    border-radius: 60px;
+    padding: 3% 6%;
+}
+
+.PrevNextText {
+    color: #fff !important;
+    font-weight: 100 !important;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.ContainerForConnection {
+    width: 80%;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1.5px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+.HeaderData {
+    color: white !important;
+    font-weight: 700 !important;
+    font-style: normal;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+.ForInput {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1.5px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 50px;
+    color: white !important;
+    font-weight: 400 !important;
+    font-style: normal;
+    font-size: 1rem;
+    height: 60px;
+    padding-left: 20px;
+    margin-right: 10% !important;
+    margin-left: 10% !important;
+    width: 80%;
+}
+
+::-webkit-input-placeholder {
+    color: black !important;
+}
+
+.ForInput:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1.5px solid #FFFFFF;
+    box-shadow: none;
+}
+
+.SendBtn {
+    width: 80%;
+    border-radius: 50px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    color: #1A1616 !important;
+    font-weight: 400 !important;
+    font-size: 1rem;
+    border: none !important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    outline: none !important;
+}
+
+.slideBTN-section {
+    background: rgba(132, 103, 154, 0.3);
+}
+
+.carousel-section {
+    padding: 3% 0;
+    background: rgba(115, 51, 99, 0.3);
+}
+
+
+@media (max-width: 1199px) {
+    .BlockContentPost {
+        padding-top: 0 !important;
+    }
+
+    .BlockImgPost {
+        padding-top: 10px !important;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1310px) {
+    .FirstContainer {
+        margin-top: 6%;
+    }
+
+    .TextBlockFirst {
+        font-size: 2.1rem;
+        line-height: 120%;
+        letter-spacing: 2.8px;
+    }
+
+    .TextBlockSecond {
+        font-size: 2.1rem;
+        line-height: 110%;
+        letter-spacing: 5.3px;
+    }
+
+    .TextBlockThird {
+        font-size: 1.1rem;
+    }
+
+    .BtnMoreInfo {
+        margin-top: 7%;
+    }
+}
+
+@media (min-width: 1050px) and (max-width: 1149px) {
+
+    .FirstContainer {
+        margin-top: 5%;
+    }
+
+    .TextBlockFirst {
+        font-size: 2.0rem;
+        line-height: 120%;
+        letter-spacing: 2.8px;
+    }
+
+    .TextBlockSecond {
+        font-size: 2.0rem;
+        line-height: 110%;
+        letter-spacing: 5.3px;
+    }
+
+    .TextBlockThird {
+        font-size: 1.0rem;
+    }
+
+    .BtnMoreInfo {
+        margin-top: 7%;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1050px) {
+
+    .FirstContainer {
+        margin-top: 5%;
+    }
+
+    .TextBlockFirst {
+        font-size: 1.9rem;
+        line-height: 120%;
+        letter-spacing: 2.8px;
+    }
+
+    .TextBlockSecond {
+        font-size: 1.9rem;
+        line-height: 110%;
+        letter-spacing: 5.3px;
+    }
+
+    .TextBlockThird {
+        font-size: 0.9rem;
+    }
+
+    .BtnMoreInfo {
+        margin-top: 7%;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .SecondContainer {
+        margin-bottom: 2%;
+    }
+
+    .HeadSlider {
+        color: white !important;
+        font-family: 'Domotika-Pro' !important;
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 120%;
+        letter-spacing: 2.8px;
+    }
+
+    .TextSlider {
+        color: white !important;
+        font-family: 'Domotika-Pro' !important;
+        font-weight: 100 !important;
+        font-size: 0.8rem;
+    }
+
+    .ForTextBlock {
+        bottom: 30% !important;
+    }
+
+    #carouselExampleDark2 {
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 800px){
+    .slideBTN-section{
+        display: none;
+    }
+
+}
+
+@media (max-width: 692px) {
+    .whiters-page {
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+    }
+
+    .HeadSlider {
+        font-size: 1.4rem;
+    }
+
+    .TextSlider {
+        font-size: 0.6rem;
+    }
+
+    .ForTextBlock {
+        bottom: 30% !important;
+    }
+
+}
+
+@media (max-width: 564px) {
+    .whiters-page {
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+    }
+
+    .HeadSlider {
+        font-size: 1.2rem;
+    }
+
+    .TextSlider {
+        display: none;
+    }
+
+    .ForTextBlock {
+        bottom: 35% !important;
+    }
+
+    .ContentPosts {
+        height: 110px;
+    }
+
+    .MoreInfoSlider {
+        font-size: 1rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 9%;
+        margin-left: 10px;
+    }
+
+    .PrevNextText {
+        display: none;
+    }
+}
+
+@media (max-width: 472px) {
+    .section-heading {
+        font-size: 1.5rem;
+    }
+    .whiters-page {
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+    }
+    .TextBlockFirst {
+        font-size: 1.7rem;
+        line-height: 120%;
+        letter-spacing: 2.8px;
+    }
+
+    .TextBlockSecond {
+        font-size: 1.7rem;
+        line-height: 110%;
+        letter-spacing: 4.7px;
+    }
+
+    .TextBlockThird {
+        font-size: 0.8rem;
+    }
+
+    .BtnMoreInfo {
+        margin-top: 7%;
+        border-radius: 40px;
+        font-size: 1.1rem;
+    }
+
+    .HeadAdvantages {
+        color: white !important;
+        font-weight: 700 !important;
+        font-style: normal;
+        font-size: 1.9rem;
+    }
+
+    .ImgAdvantages {
+        width: 110px;
+        height: 110px;
+    }
+
+    .HeadTextAdventages {
+        color: white !important;
+        font-weight: 700 !important;
+        font-style: normal;
+        font-size: 1.6rem;
+    }
+
+    .MainTextAdvantages {
+        color: white !important;
+        font-weight: 300 !important;
+        font-style: normal;
+        font-size: 0.8rem;
+    }
+
+    .HeadSlider {
+        font-size: 1rem;
+    }
+
+    .TextSlider {
+        display: none;
+    }
+
+    .ForTextBlock {
+        bottom: 35% !important;
+    }
+
+
+    .ContentPosts {
+        color: white !important;
+        font-weight: 300 !important;
+        font-style: normal;
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .HeadPosts {
+        font-size: 1.3rem;
+    }
+
+    .MoreInfoSlider {
+        font-size: 0.7rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 12%;
+    }
+}
+
+@media (max-width: 420px) {
+    .whiters-page {
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+    }
+    .HeadSlider {
+        font-size: 0.7rem;
+    }
+
+    .TextSlider {
+        display: none;
+    }
+
+    .ForTextBlock {
+        bottom: 35% !important;
+    }
+}
+
+@media (max-width: 392px) {
+    .whiters-page {
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 14%;
+    }
+
+    .MoreInfoSlider {
+        font-size: 0.6rem;
+    }
+
+    .HeaderPosts {
+        font-size: 1.9rem;
+    }
+
+    .HeadPosts {
+        font-size: 1.0rem;
+    }
+
+    .MoreInfoSlider {
+        width: 50%;
+    }
+}
+
+@media (max-width: 356px) {
+    .whiters-page {
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+    }
+    .ContentPosts {
+        height: 100px;
+    }
+
+    .MoreInfoSlider {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 339px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 16%;
+    }
+
+    .MoreInfoSlider {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .HeadSlider {
+        font-size: 0.5rem;
+    }
+
+    .TextSlider {
+        display: none;
+    }
+
+    .ForTextBlock {
+        bottom: 35% !important;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 17%;
+    }
+
+    .MoreInfoSlider {
+        font-size: 0.6rem;
+        padding: 10px;
+    }
+
+    .BtnMoreInfo {
+        width: 70%;
+    }
+
+    .ForInput {
+        font-size: 0.8rem;
+    }
+
+    .HeaderData {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+

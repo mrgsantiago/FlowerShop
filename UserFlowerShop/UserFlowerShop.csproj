@@ -255,6 +255,9 @@
     <Content Include="img\poluhenie.png" />
     <Content Include="img\Provence.png" />
     <Content Include="img\Romahka.png" />
+    <Content Include="img\slaid1.jpg" />
+    <Content Include="img\slaid2.jpg" />
+    <Content Include="img\slaid3.jpg" />
     <Content Include="img\tracking.png" />
     <Content Include="img\TravelM.png" />
     <Content Include="img\vesennie.jpg" />
@@ -334,6 +337,7 @@
     <Content Include="Views\BasketContents\Details.cshtml" />
     <Content Include="Views\BasketContents\Edit.cshtml" />
     <Content Include="Views\BasketContents\Index.cshtml" />
+    <Content Include="Views\Goods\ElementGoodsTwo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

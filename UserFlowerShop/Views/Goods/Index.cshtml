@@ -26,10 +26,10 @@
                         <div class="col-8">
                             <div class="container">
                                 <div class="text-center">
-                                    <h2 class="section-heading">Каталог товаров</h2>
+                                    <h2 class="section-heading text-left">Каталог товаров</h2>
                                 </div>
 
-                                @{string idCategory = "8"; }
+                                @{string idCategory = "1"; }
                                 <div class="container BlockGoods" id="ElementGoods">
                                     @Html.Action("ElementGoods", new { id = idCategory })
                                 </div>

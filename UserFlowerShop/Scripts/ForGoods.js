@@ -38,6 +38,25 @@ function LoadGoods(item) {
         }
     });
 }
+function LoadGoodsTwo(item) {
+    let id = item.id
+    let object = {
+        id: id
+    };
+    let obj = JSON.stringify(object)
+    $.ajax({
+        type: 'POST',
+        url: '/Goods/ElementGoodsTwo',
+        contentType: 'application/json; charset=utf-8',
+        data: obj,
+        success: function (data) {
+            $('#ElementGoodsTwo').html(data);
+        },
+        error: function (data) {
+            alert(data.responseText);
+        }
+    });
+}
 
 function ClickMinus(item) {
     const ValMinus = 1

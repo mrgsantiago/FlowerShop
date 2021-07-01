@@ -26,7 +26,14 @@ namespace UserFlowerShop.Controllers
             int IDCategory = Convert.ToInt32(id);
             var goods = db.Goods.Where(p => p.IdCategory == IDCategory);
             return PartialView(goods.ToList());
-        } 
+        }
+        public ActionResult ElementGoodsTwo(string id)
+        {
+            int IDCategory = Convert.ToInt32(id);
+            var goods = db.Goods.Where(p => p.IdCategory == IDCategory).Take(3);
+           
+            return PartialView(goods.ToList());
+        }
         public ActionResult LoadInfoGoods(string id)
         {
             int IDGood = Convert.ToInt32(id);

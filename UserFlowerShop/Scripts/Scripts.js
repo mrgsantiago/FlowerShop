@@ -56,4 +56,17 @@
 
 })(jQuery); // End of use strict
 
+function AddColor() {
 
+    if ($("#mainNav").hasClass("ForColorBlock")) {
+        setTimeout(function () {
+            $("#mainNav").removeClass('ForColorBlock');
+
+        }, 160);
+    }
+    else {
+        $("#mainNav").addClass('ForColorBlock');
+    }
+
+
+}
